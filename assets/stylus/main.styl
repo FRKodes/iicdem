@@ -1,0 +1,157 @@
+azul = #004667
+gris0 = #e6e6e6
+gris1 = #b2b2b2
+verde0 = #66c6c4
+facebook = #4a70af
+twitter = #32b4e5
+instagram = #d2bdaa
+mail = #b3b3b3
+
+.azul
+	color azul
+body
+	background white
+#page
+	overflow hidden
+.panel-content
+	margin-bottom 30px
+.site-branding
+	background verde0
+	height 50px
+	overflow hidden
+.logo-container
+	background #e6e6e6
+	display inline-block
+	margin -100px 0 0 -20px
+	padding 100px 0 100px 20px
+	transform rotate(20deg)
+	vertical-align middle
+	width 50%
+#logo
+	display inline-block
+	max-width 90%
+	transform: rotate(-20deg);
+.twentyseventeen-panel
+	overflow visible
+.twentyseventeen-front-page.has-header-image
+	.site-branding
+		margin 0 !important
+		position relative
+.site-branding
+	padding 0
+body:not(.title-tagline-hidden) .site-branding-text
+.site-branding-text
+	display none
+h1.site-title
+	color white
+	font-size .8em
+.nav-button
+	display inline-block
+	float right
+	.navbar-toggle
+		height auto
+		padding 8px 2px
+		width 40px
+		span.icon-bar
+			background white
+			border-radius 0px
+			height 3px
+			width 100%
+.has-header-image.twentyseventeen-front-page
+	.custom-header
+		background #59c3c1
+		display block
+		height 50px
+
+.twentyseventeen-front-page
+	.custom-header
+		background #59c3c1
+		display block
+		height 50px
+		overflow hidden
+.navigation-top
+	position absolute
+	right -50%
+	width 50%
+	background black
+.main-banner-container
+	margin-top -10px
+	position relative
+	z-index 10
+.block-title
+	color white
+	border-bottom 1px solid gris1
+	span
+		background azul
+		padding 5px 10px
+		display inline-block
+.home-next-events
+	.events-container
+		margin-top 20px
+		display flex
+		justify-content space-around
+		.item
+			text-align center
+			width 30%
+			.calendar
+				width 80%
+				margin 0 auto
+				.month
+					background azul
+					color white
+					font-size 1.4em
+					padding 5px 0
+					border-radius 4px 4px 0 0
+				.day
+					background gris0
+					color azul
+					font-size 4em
+					padding 10px 0
+					border-radius  0 0 4px 4px
+			.description
+				color verde0
+				margin-top 10px
+.allies-container
+	display flex
+	flex-wrap wrap
+	justify-content space-around
+	.item-allie
+		margin-top 20px
+		width 28%
+.site-footer
+	background gris0
+	text-align center
+	.col-left
+	.col-center
+	.col-right
+		margin-bottom 20px
+	.hashtag
+		font-size 2.2em
+		color verde0
+		font-style italic
+		span
+			color azul
+	.logo
+		width 200px
+		height auto
+		display inline-block
+	.social
+		padding 0
+		li
+			display inline-block
+			font-size 3em
+			margin 0 5px
+			.icon-facebook
+				color facebook
+			.icon-twitter
+				color twitter
+			.icon-instagram
+				color instagram
+			.icon-mail
+				color mail
+@media screen and (min-width: 380px)
+	#logo
+		max-width 150px
+@media screen and (min-width: 768px)
+	.navbar-toggle
+		display inline-block
