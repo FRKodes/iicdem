@@ -46,6 +46,7 @@
 	</div><!-- .site-content-contain -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
-
+<script src="/wp-content/themes/iicdem/assets/js/z-custom.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChauYCbUFFlNDoI25Xrwg6nIeQpIOjJZU&callback=initMap"></script>
 </body>
 </html>

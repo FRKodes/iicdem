@@ -9,6 +9,12 @@ mail = #b3b3b3
 
 .azul
 	color azul
+.verde0
+	color verde0
+.mayus
+	text-transform uppercase
+.italic
+	font-style italic
 body
 	background white
 #page
@@ -118,6 +124,58 @@ h1.site-title
 	.item-allie
 		margin-top 20px
 		width 28%
+.single-featured-image-header
+	border none
+.icon-bulls-eye
+.icon-plane
+	margin-right 5px
+.entry-header
+	text-align center
+body.page:not(.twentyseventeen-front-page)
+	.entry-title
+		font-size 1.8em
+		margin -90px 0 50px 0
+		color white
+		text-shadow 0px 0px 5px #515151
+img.about
+	max-width 60%
+#miembros-fundadores
+	.entry-title
+		margin-top -50px
+		margin-bottom 10px
+.members-container
+	.member-item
+		margin-bottom 40px
+		.title
+			text-align center
+		.photo
+			text-align center
+			.member-photo-container
+				background gris0
+				border-radius 50%
+				width 180px
+				height 180px
+				display inline-block
+				overflow hidden
+			.position
+				margin-bottom 10px
+			.review-link
+				background azul
+				color white
+				border none
+				border-radius 0px
+				&:hover
+					background rgba(azul, .8)
+		.info
+			background gris0
+#contacto
+	.entry-title
+		margin-bottom 34px
+#map
+	display block
+	height 300px
+	margin-bottom 30px
+	width 100%
 .site-footer
 	background gris0
 	text-align center
@@ -152,6 +210,24 @@ h1.site-title
 @media screen and (min-width: 380px)
 	#logo
 		max-width 150px
+@media screen and (min-width: 480px)
+	body.page:not(.twentyseventeen-front-page)
+		.entry-title
+			font-size 2.4em
+			margin -130px 0 70px 0
+	#miembros-fundadores
+		.entry-title
+			margin-top -70px
+@media screen and (min-width: 650px)
+	#miembros-fundadores
+		.entry-title
+			margin-top -80px
 @media screen and (min-width: 768px)
 	.navbar-toggle
 		display inline-block
+	body.page-two-column:not(.archive)
+		#primary
+			.entry-header
+			.entry-content
+				width 100%
+				float none
