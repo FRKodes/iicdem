@@ -11,8 +11,14 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'twentyseventeen-panel ' ); ?> >
 
-	<div class="main-banner-container">
-		<img src="<?php echo get_template_directory_uri().'/assets/images/banner_home.png'; ?>" alt="Logo <?php bloginfo('name'); ?>">
+	<div class="main-banners-container">
+		<div class="item">
+			<img src="<?php echo get_template_directory_uri().'/assets/images/banner_home.png'; ?>" alt="Logo <?php bloginfo('name'); ?>">
+			<div class="banner-info-container">
+				<div class="banner-title mayus">Workshop</div>
+				<div class="banner-description mayus">ergometría y gasto energético</div>
+			</div>
+		</div>
 	</div>
 
 	<div class="home-next-events panel-content">

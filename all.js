@@ -1115,10 +1115,10 @@
 })();
 
 function initMap() {
-  var myLatLng = {lat: -25.363, lng: 131.044};
+  var myLatLng = {lat: 20.655072, lng: -103.393212};
 
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
+    zoom: 10,
     center: myLatLng
   });
 

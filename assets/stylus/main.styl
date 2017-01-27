@@ -1,6 +1,7 @@
 azul = #004667
 gris0 = #e6e6e6
 gris1 = #b2b2b2
+gris2 = #515151
 verde0 = #66c6c4
 facebook = #4a70af
 twitter = #32b4e5
@@ -15,8 +16,22 @@ mail = #b3b3b3
 	text-transform uppercase
 .italic
 	font-style italic
+.m-top-20
+	margin-top 20px
+.btn.btn-primary
+	border-radius 0px
+	width 100%
+	&.azul
+		background azul
+		color white
 body
 	background white
+.single-featured-image-header
+	padding-top 50px
+.site-branding
+	position fixed
+	z-index 100
+	width 100%
 #page
 	overflow hidden
 .panel-content
@@ -26,7 +41,7 @@ body
 	height 50px
 	overflow hidden
 .logo-container
-	background #e6e6e6
+	background gris0
 	display inline-block
 	margin -100px 0 0 -20px
 	padding 100px 0 100px 20px
@@ -80,10 +95,22 @@ h1.site-title
 	right -50%
 	width 50%
 	background black
-.main-banner-container
+.main-banners-container
 	margin-top -10px
 	position relative
 	z-index 10
+	.item
+		position relative
+		color white
+.banner-info-container
+	position absolute
+	top 25%
+	left 10%
+	text-shadow 0px 0px 7px gris2
+	.banner-title
+		font-size 2.2em
+	.banner-description
+		font-size 1.4em
 .block-title
 	color white
 	border-bottom 1px solid gris1
@@ -136,7 +163,7 @@ body.page:not(.twentyseventeen-front-page)
 		font-size 1.8em
 		margin -90px 0 50px 0
 		color white
-		text-shadow 0px 0px 5px #515151
+		text-shadow 0px 0px 5px gris2
 img.about
 	max-width 60%
 #miembros-fundadores
@@ -176,6 +203,12 @@ img.about
 	height 300px
 	margin-bottom 30px
 	width 100%
+input[type="text"]
+.form-control
+	border-radius 0px
+	background gris0
+	border none
+	resize none
 .site-footer
 	background gris0
 	text-align center
@@ -208,9 +241,19 @@ img.about
 			.icon-mail
 				color mail
 @media screen and (min-width: 380px)
+	.logo-container
+		width 200px
 	#logo
 		max-width 150px
 @media screen and (min-width: 480px)
+	.banner-info-container
+		position absolute
+		top 30%
+		left 15%
+		.banner-title
+			font-size 2.8em
+		.banner-description
+			font-size 1.6em
 	body.page:not(.twentyseventeen-front-page)
 		.entry-title
 			font-size 2.4em
@@ -223,11 +266,47 @@ img.about
 		.entry-title
 			margin-top -80px
 @media screen and (min-width: 768px)
+	.navigation-top.site-navigation-fixed
+		display none
+	.custom-header
+		margin-bottom -2px !important
 	.navbar-toggle
 		display inline-block
+	.banner-info-container
+		top 30%
+		left 15%
+		.banner-title
+			font-size 4em
+		.banner-description
+			font-size 2.4em
+	.home-next-events
+	.home-allies
+		.wrap
+			padding-top 20px
+		&.panel-content
+			margin-bottom 10px
+	.home-next-events
+		.events-container
+			.item
+				.calendar
+					width 60%
+				.description
+					font-size 1.3em
+	.block-title
+		font-size 1.4em
 	body.page-two-column:not(.archive)
 		#primary
 			.entry-header
 			.entry-content
 				width 100%
 				float none
+	img.about
+		max-width 45%
+	.site-footer
+		.hashtag
+			font-size 3em
+		.logo
+			width 260px
+		.social
+			li
+				font-size 4em
