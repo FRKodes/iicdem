@@ -21,7 +21,6 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-
 			<?php
 			/**
 			 * Forget this shit below!
@@ -49,7 +48,6 @@ get_header(); ?>
 				</div>
 			</div>
 			
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div><!-- .wrap -->

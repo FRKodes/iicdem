@@ -32,23 +32,24 @@
 
 	</header><!-- #masthead -->
 
-	<?php
-	// If a regular post or page, and not the front page, show the featured image.
-	if ( has_post_thumbnail() && ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) ) :
-		echo '<div class="single-featured-image-header">';
-		the_post_thumbnail( 'twentyseventeen-featured-image' );
-		echo '</div><!-- .single-featured-image-header -->';
-	endif;
-	?>
-
 	<div class="site-content-contain">
-		
-		<?php if ( has_nav_menu( 'top' ) ) : ?>
-			<div class="navigation-top">
-				<div class="wrap">
-					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-				</div><!-- .wrap -->
-			</div><!-- .navigation-top -->
-		<?php endif; ?>
+		<div class="main-navigation-container">
+			<?php if ( has_nav_menu( 'top' ) ) : ?>
+				<div class="navigation-top">
+					<div class="wrap">
+						<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+					</div><!-- .wrap -->
+				</div><!-- .navigation-top -->
+			<?php endif; ?>
+		</div>
 
 		<div id="content" class="site-content">
+			
+			<?php
+			// If a regular post or page, and not the front page, show the featured image.
+			if ( has_post_thumbnail() && ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) ) :
+				echo '<div class="single-featured-image-header">';
+				the_post_thumbnail( 'twentyseventeen-featured-image' );
+				echo '</div><!-- .single-featured-image-header -->';
+			endif;
+			?>
