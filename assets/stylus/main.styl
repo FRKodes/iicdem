@@ -317,6 +317,29 @@ input[type="text"]
 		.entry-title
 			margin-top -80px
 @media screen and (min-width: 768px)
+	body:not(.title-tagline-hidden) .site-branding-text
+	.site-branding-text
+		display inline-block
+		left 210px
+		top 10px
+	body:not(.title-tagline-hidden)
+		.site-branding-text
+			position absolute
+		    display inline-block
+		    left 210px
+	.site-branding-text
+			position absolute
+		    display inline-block
+		    left 210px
+	.site-title a
+		color white
+		font-weight 100
+	.navigation-top
+		bottom initial
+		font-size 1.1em
+		left initial
+		right initial
+		width 260px
 	.navigation-top.site-navigation-fixed
 		display none
 	.custom-header
@@ -351,12 +374,14 @@ input[type="text"]
 			.entry-content
 				width 100%
 				float none
+	.single-featured-image-header
+		padding-top 0
 	img.about
 		max-width 45%
 	body.page:not(.twentyseventeen-front-page)
 		.entry-title
 			font-size 3em
-			margin -190px 0 100px 0
+			margin -150px 0 100px 0
 	#acerca-de
 		.col-sm-6
 			h2.title
@@ -367,7 +392,7 @@ input[type="text"]
 					font-size 1.2em
 	#miembros-fundadores
 		.entry-title
-			margin-top -115px
+			margin-top -60px
 			margin-bottom 30px
 	.members-container
 		.member-item
@@ -393,7 +418,7 @@ input[type="text"]
 				line-height 26px
 				font-size 1.2em
 	#map
-		margin-top 100px
+		margin-top 55px
 	.site-footer
 		.first-block
 			vertical-align middle
@@ -409,6 +434,50 @@ input[type="text"]
 			li
 				font-size 4em
 @media screen and (min-width: 992px)
+	.twentyseventeen-front-page
+		.custom-header
+			height 90px
+	.site-branding
+		height 90px
+	.logo-container
+		width 400px
+		margin-top -88px
+	#logo
+		max-width 280px
+	body:not(.title-tagline-hidden) .site-branding-text
+	.site-branding-text
+		left 450px
+		top 17px
+	body:not(.title-tagline-hidden)
+		width 100%
+	h1.site-title
+		font-size 1.9em
+		line-height .95em
+	body:not(#inicio)
+		.site-title
+			font-size 1.9em
+			line-height .95em
+	body.page:not(.twentyseventeen-front-page)
+		.main-navigation-container
+			margin-top 90px
+	.nav-button
+		.navbar-toggle
+			width 50px
+			padding-right 10px 2px
+			margin-top 24px
+			margin-right 25px
+			margin-bottom 22px
+			span.icon-bar
+				height 5px
+			.icon-bar+.icon-bar
+				margin-top 6px
+	.main-navigation
+		li
+			display block
+	.main-banners-container
+		max-width 1000px
+		margin-left auto
+		margin-right auto
 	.home-next-events
 		.events-container
 			margin-top 40px
@@ -438,9 +507,12 @@ input[type="text"]
 				background-position -509px 0px
 			&.evolution
 				background-position -680px 0px
+	.single-featured-image-header
+		max-width 1000px
+		margin 0 auto
 	#miembros-fundadores
 		.entry-title
-			margin-top -125px
+			margin-top -70px
 			margin-bottom 50px
 	body.page:not(.twentyseventeen-front-page)
 		.entry-title
@@ -449,14 +521,19 @@ input[type="text"]
 		.member-item
 			margin-bottom 80px
 			.photo
+				.member-photo-shadow-container
+					margin-top -60px
 				.position
 					font-size 1.5em
+					margin-top -30px
+					position relative
+					z-index 1
 			.info
 				padding-top 30px
 				line-height 30px
 				font-size 1.3em
 	#map
-		margin-top 90px
+		margin-top 50px
 	.site-footer
 		.hashtag
 			float left
