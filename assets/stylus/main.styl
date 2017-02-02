@@ -24,8 +24,20 @@ mail = #b3b3b3
 	&.azul
 		background azul
 		color white
+.triangle
+	width 0
+	height 0
+	border-left 10px solid transparent
+	border-right 10px solid transparent
+	border-bottom 10px solid gris1
+	position absolute
+	right 0
+	bottom 5px
+	transform rotate(-45deg)
 body
 	background gris1
+	font-family 'Roboto', sans-serif
+	font-size 1.15em
 .js .main-navigation ul
 	display block
 	background transparent
@@ -106,7 +118,7 @@ body:not(.title-tagline-hidden) .site-branding-text
 	display none
 h1.site-title
 	color white
-	font-size .8em
+	font-size 1em
 .nav-button
 	display inline-block
 	float right
@@ -130,6 +142,44 @@ h1.site-title
 		display block
 		height 50px
 		overflow hidden
+.slick-prev
+.slick-next
+	top 40%
+	z-index 1
+	position absolute
+	width 20px
+	height 20px
+	border-radius 50%
+	padding 0
+	background verde0
+	font-size 2.4em
+	&:before
+		margin-top -3px
+		margin-left -1px
+	span
+		visibility hidden
+.slick-prev
+	left 20px
+.slick-next
+	right 20px
+.slick-dots
+	text-align center
+	li
+		display inline-block
+		width 10px
+		height 10px
+		overflow hidden
+		border-radius 50%
+		margin 0 5px
+		border 1px solid verde0
+		background white
+		transition background .5s ease
+		&.slick-active
+			background verde0
+			transition background .5s ease
+		button
+			background transparent
+			color transparent
 .main-banners-container
 	margin-top -10px
 	position relative
@@ -162,8 +212,9 @@ h1.site-title
 			text-align center
 			width 30%
 			.calendar
-				width 80%
 				margin 0 auto
+				position relative
+				width 95%
 				.month
 					background azul
 					color white
@@ -263,6 +314,7 @@ input[type="text"]
 .site-footer
 	background gris0
 	text-align center
+	border none
 	.col-left
 	.col-center
 	.col-right
@@ -297,6 +349,31 @@ input[type="text"]
 	#logo
 		max-width 150px
 @media screen and (min-width: 480px)
+	.slick-prev
+	.slick-next
+		top 40%
+		z-index 1
+		position absolute
+		width 22px
+		height 22px
+		border-radius 50%
+		padding 0
+		background verde0
+		font-size 2.5em
+		&:before
+			position absolute
+			left -1px
+		span
+			visibility hidden
+	.slick-prev
+		left 20px
+	.slick-next
+		right 20px
+	.slick-dots
+		li
+			width 14px
+			height 14px
+			margin 0 5px
 	.banner-info-container
 		position absolute
 		top 30%
@@ -317,11 +394,21 @@ input[type="text"]
 		.entry-title
 			margin-top -80px
 @media screen and (min-width: 768px)
+	.triangle
+		width 0
+		height 0
+		border-left 15px solid transparent
+		border-right 15px solid transparent
+		border-bottom 15px solid gris1
+		position absolute
+		right 0
+		bottom 9px
+		transform rotate(-45deg)
 	body:not(.title-tagline-hidden) .site-branding-text
 	.site-branding-text
 		display inline-block
 		left 210px
-		top 10px
+		top 7px
 	body:not(.title-tagline-hidden)
 		.site-branding-text
 			position absolute
@@ -331,9 +418,11 @@ input[type="text"]
 			position absolute
 		    display inline-block
 		    left 210px
-	.site-title a
-		color white
-		font-weight 100
+	.site-title
+		font-size .9em
+		a
+			color white
+			font-weight 100
 	.navigation-top
 		bottom initial
 		font-size 1.1em
@@ -346,6 +435,35 @@ input[type="text"]
 		margin-bottom -2px !important
 	.navbar-toggle
 		display inline-block
+	.slick-prev
+	.slick-next
+		top 40%
+		z-index 1
+		position absolute
+		width 30px
+		height 30px
+		border-radius 50%
+		padding 0
+		background verde0
+		font-size 3.6em
+		&:before
+			position absolute
+			left -2px
+			top 1px
+		span
+			visibility hidden
+	.slick-prev
+		left 20px
+	.slick-next
+		right 20px
+	.slick-dots
+		li
+			width 20px
+			height 20px
+	.main-banners-container
+		max-width 768px
+		margin-left auto
+		margin-right auto
 	.banner-info-container
 		top 30%
 		left 15%
@@ -447,11 +565,11 @@ input[type="text"]
 	body:not(.title-tagline-hidden) .site-branding-text
 	.site-branding-text
 		left 450px
-		top 17px
+		top 18px
 	body:not(.title-tagline-hidden)
 		width 100%
 	h1.site-title
-		font-size 1.9em
+		font-size 1.8em
 		line-height .95em
 	body:not(#inicio)
 		.site-title
@@ -533,7 +651,8 @@ input[type="text"]
 				line-height 30px
 				font-size 1.3em
 	#map
-		margin-top 50px
+		height 420px
+		margin-top 90px
 	.site-footer
 		.hashtag
 			float left

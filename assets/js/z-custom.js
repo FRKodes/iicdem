@@ -21,4 +21,12 @@ $(document).ready(function() {
     $('.site-content-contain').toggleClass('moved');
     $('.main-navigation-container').toggleClass('alpha');
   });
+
+  $('.main-banners-container').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    dots: true,
+    prevArrow: '<button type="button" class="slick-prev icon-arrow-left"><span>Previous</span></button>',
+    nextArrow: '<button type="button" class="slick-next icon-arrow-right"><span>Next</span></button>'
+  });
  });

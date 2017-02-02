@@ -19,6 +19,14 @@
 				<div class="banner-description mayus">ergometría y gasto energético</div>
 			</div>
 		</div>
+
+		<div class="item">
+			<img src="<?php echo get_template_directory_uri().'/assets/images/banner_home_02.jpg'; ?>" alt="Logo <?php bloginfo('name'); ?>">
+			<div class="banner-info-container">
+				<div class="banner-title mayus">Workshop 02</div>
+				<div class="banner-description mayus">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+			</div>
+		</div>
 	</div>
 
 	<div class="home-next-events panel-content">
@@ -31,6 +39,7 @@
 					<div class="calendar">
 						<div class="month">FEB</div>
 						<div class="day">02</div>
+						<div class="triangle"></div>
 					</div>
 					<div class="description">Certificaciones internacionales ISAK 1, ISAK 2</div>
 				</div>
@@ -39,6 +48,7 @@
 					<div class="calendar">
 						<div class="month">MAR</div>
 						<div class="day">12</div>
+						<div class="triangle"></div>
 					</div>
 					<div class="description">Certificaciones internacionales ISAK 1, ISAK 2</div>
 				</div>
@@ -47,6 +57,7 @@
 					<div class="calendar">
 						<div class="month">ABR</div>
 						<div class="day">30</div>
+						<div class="triangle"></div>
 					</div>
 					<div class="description">Certificaciones internacionales ISAK 1, ISAK 2</div>
 				</div>
