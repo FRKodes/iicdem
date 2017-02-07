@@ -12,21 +12,21 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'twentyseventeen-panel ' ); ?> >
 
 	<div class="main-banners-container">
-		<div class="item">
-			<img src="<?php echo get_template_directory_uri().'/assets/images/banner_home.png'; ?>" alt="Logo <?php bloginfo('name'); ?>">
-			<div class="banner-info-container">
-				<div class="banner-title mayus">Workshop</div>
-				<div class="banner-description mayus">ergometría y gasto energético</div>
-			</div>
-		</div>
+		<?php 
+		$args = array( 'post_type' => 'banner', 'posts_per_page' => 10 );
+		$loop = new WP_Query( $args );
+		while ( $loop->have_posts() ) : $loop->the_post();?>
 
-		<div class="item">
-			<img src="<?php echo get_template_directory_uri().'/assets/images/banner_home_02.jpg'; ?>" alt="Logo <?php bloginfo('name'); ?>">
-			<div class="banner-info-container">
-				<div class="banner-title mayus">Workshop 02</div>
-				<div class="banner-description mayus">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-			</div>
-		</div>
+			<div class="item">
+				<img src="<?php the_post_thumbnail(); ?>" alt="<?php the_content(); ?>">
+				<div class="banner-info-container">
+					<div class="banner-title mayus"> <?php the_title(); ?></div>
+					<div class="banner-description mayus"> <?php the_content(); ?> </div>
+				</div>
+			</div><?php
+
+		endwhile;
+		?>
 	</div>
 
 	<div class="home-next-events panel-content">

@@ -559,3 +559,40 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+
+/**
+ * IICDEM CUSTOM STUFF
+ */
+
+add_action( 'init', 'create_banner_post_type' );
+function create_banner_post_type() {
+  register_post_type( 'banner',
+    array(
+      'labels' => array(
+        'name' => __( 'Banners' ),
+        'singular_name' => __( 'Banner' ),
+        'add_new' => __( 'Agregar otro Banner' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'supports'=> array('title', 'editor', 'thumbnail'),
+    )
+  );
+}
+
+add_action( 'init', 'create_member_post_type' );
+function create_member_post_type() {
+  register_post_type( 'miembro',
+    array(
+      'labels' => array(
+        'name' => __( 'Miembros' ),
+        'singular_name' => __( 'Miembro' ),
+        'add_new' => __( 'Agregar otro Miembro' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'supports'=> array('title', 'editor', 'thumbnail'),
+    )
+  );
+}
