@@ -18,7 +18,7 @@
 	</header><!-- .entry-header -->
 	<div class="entry-content">
 		<div class="row">
-			<div class="col-sm-6">	
+			<div class="col-sm-6 top-space">
 				<?php the_content(); ?>
 			</div>
 			<div class="col-sm-6 text-center">

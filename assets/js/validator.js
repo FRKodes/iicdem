@@ -1,40 +1,8 @@
-function initMap() {
-  var myLatLng = {lat: 20.655072, lng: -103.393212};
-
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 14,
-    center: myLatLng,
-    scrollwheel: false
-  });
-
-  var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    title: 'Hello World!'
-  });
-}
-
-$(document).ready(function() {
-  $('button.navbar-toggle').on('click', function (){
-    $('.site-content-contain').toggleClass('moved');
-    $('.main-navigation-container').toggleClass('alpha');
-  });
-
-  $('.main-banners-container').slick({
-    autoplay: true,
-    autoplaySpeed: 5000,
-    dots: true,
-    prevArrow: '<button type="button" class="slick-prev icon-arrow-left"><span>Previous</span></button>',
-    nextArrow: '<button type="button" class="slick-next icon-arrow-right"><span>Next</span></button>'
-  });
-
- });
-
 /*-------------------------------
-  VALIDATE.JS
-  A barebones jQuery validation plugin
-  @author Todd Francis
-  @version 1.0.3
+	VALIDATE.JS
+	A barebones jQuery validation plugin
+	@author Todd Francis
+	@version 1.0.3
 -------------------------------*/
 ;(function(r,d,l){d.fn.validate=function(m){return this.each(function(){var f=d(this);if(l===f.data("validate")){var j=new d.validate(m,f);f.data("validate",j)}})};d.validate=function(m,f){function j(a,b){-1==d.inArray(a,b)&&b.push(a);return b}function p(a){a=a.slice(a.indexOf("[")+1,-1);return-1!==a.indexOf(",")?a.split(","):[a]}function n(a){for(var b=[],c=0;c<a.length;c++){var g=a[c],d=[],h=g.indexOf("[");-1!==h&&(d=d.concat(p(g)),g=g.slice(0,h));b.push({rule:g,args:d})}return b}var h=d.extend(!0,
 {debug:!1,autoDetect:!1,visibleOnly:!0,beforeSubmit:function(){},singleError:function(){},overallError:function(){},singleSuccess:function(){},overallSuccess:function(){},regExp:{alpha:/^[a-zA-Z]*$/,numeric:/^[0-9]*$/,alphanumeric:/^[a-zA-Z0-9]*$/,url:/^(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?$/,email:/^[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9\-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/}},
@@ -43,37 +11,3 @@ m),c=this,q=["checkGroupRequired","checkGroupMin","checkGroupMax"];c.$form=f;c.v
 0;g<b.length;g++){var f=b[g].rule,k="",j=[a].concat(b[g].args.slice());f.indexOf("[");k="check"+f.charAt(0).toUpperCase()+f.slice(1);"checkRequired"==k&&a.is('input[type="checkbox"]')?k="checkRequiredCheckbox":-1!=d.inArray(k,q)&&(f=d('input[type="checkbox"]',a),f.length||(f=d('input[type="radio"]',a)),j=[f].concat(j.slice(1)));c[k]instanceof Function?c[k].apply(c,j)||e.push(b[g]):h.regExp[b[g].rule]?""!==a.val()&&!c.checkRegExp(a,b[g].rule)&&e.push(b[g]):e.push(b[g])}return 0<e.length?e:!0};c.fieldsToCheck=
 function(a){a=d("[data-validate]",a===l?c.$form:a);h.autoDetect&&(a=d("input[required]").add(a));return a};c.checkRequired=function(a){return 0<a.val().length?!0:!1};c.checkRequiredCheckbox=function(a){return a.is(":checked")};c.checkGroupRequired=function(a){return a.filter(":checked").length?!0:!1};c.checkGroupMin=function(a,b){return a.filter(":checked").length>=b};c.checkGroupMax=function(a,b){return a.filter(":checked").length<=b};c.checkCustomRegExp=function(a,b,c){if(""===a.val())return!0;
 b=RegExp(b,c);return a.val().match(b)?!0:!1};c.checkRegExp=function(a,b){return a.val().match(h.regExp[b])?!0:!1};c.checkMaxLength=function(a,b){return""===a.val()?!0:a.val().length<=b};c.checkMinLength=function(a,b){return""===a.val()?!0:a.val().length>=b};c.checkMax=function(a,b){return""===a.val()?!0:parseFloat(a.val())<=parseFloat(b)};c.checkMin=function(a,b){return""===a.val()?!0:parseFloat(a.val())>=parseFloat(b)}}})(window,jQuery);
-
-/*validator*/
-$(function(){ 
-  var formSettings = {
-    singleError : function($field, rules){ 
-      $field.closest('.form-group').removeClass('valid').addClass('error');
-      $('.alert_fields').fadeIn();
-    },
-    singleSuccess : function($field, rules){ 
-      $field.closest('.form-group').removeClass('error').addClass('valid');
-      $('.alert_fields').fadeOut();
-    },
-    overallSuccess : function(){
-      var form      = $('#contactForm'),
-        nombre    = form.find( "input[name='nombre']").val(),
-        email     = form.find( "input[name='email']").val(),
-        mensaje   = form.find( "textarea[name='mensaje']").val(),
-        action    = form.attr( "action"),
-        url       = action;
-
-      var posting = $.post(
-        url, { n: nombre, e: email, m: mensaje }
-      );
-      posting.done(function( data ){
-        console.log(data);
-        $('#contactForm')[0].reset();
-        $('.email-sent-alert').fadeIn().delay(3000).fadeOut();
-      });
-    },
-    overallError : function($form, fields){ /*Do nothing, just show the error fields*/ },
-      autoDetect : true, debug : true
-    };
-  var $validate = $('#contactForm').validate(formSettings).data('validate');
-});

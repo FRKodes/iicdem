@@ -18,6 +18,8 @@ mail = #b3b3b3
 	font-style italic
 .m-top-20
 	margin-top 20px
+.hidden_
+	display none
 .btn.btn-primary
 	border-radius 0px
 	width 100%
@@ -38,6 +40,7 @@ body
 	background gris1
 	font-family 'Roboto', sans-serif
 	font-size 1.15em
+	text-align justify
 .js .main-navigation ul
 	display block
 	background transparent
@@ -300,6 +303,31 @@ img.about
 #contacto
 	.entry-title
 		margin-bottom 34px
+form
+	position relative
+.error
+	.form-control
+		background rgba(red, .2)
+		transition background .5s ease
+.alert_fields
+	background rgba(red, .6)
+	border-radius 4px
+	color white
+	display none
+	margin-bottom 10px
+	padding 3px 10px
+.email-sent-alert
+	background rgba(verde0, .9)
+	color white
+	display none
+	font-size 1.2em
+	padding 40px 20px
+	position absolute
+	text-align center
+	top 0px
+	width 100%
+	b
+		font-size 1.6em
 #map
 	display block
 	height 300px
@@ -320,7 +348,7 @@ input[type="text"]
 	.col-right
 		margin-bottom 20px
 	.hashtag
-		font-size 2.2em
+		font-size 1.9em
 		color verde0
 		font-style italic
 		span
@@ -494,8 +522,10 @@ input[type="text"]
 				float none
 	.single-featured-image-header
 		padding-top 0
+	.top-space
+		padding-top 30px
 	img.about
-		max-width 45%
+		max-width 40%
 	body.page:not(.twentyseventeen-front-page)
 		.entry-title
 			font-size 3em
@@ -536,7 +566,7 @@ input[type="text"]
 				line-height 26px
 				font-size 1.2em
 	#map
-		margin-top 55px
+		margin-top 40px
 	.site-footer
 		.first-block
 			vertical-align middle

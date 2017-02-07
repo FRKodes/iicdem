@@ -37,7 +37,7 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 			
-			<div class="row">
+			<div class="row top-space">
 				<div class="col-sm-6">
 					<h2 class="title"><span class="icon-bulls-eye verde0"></span>MISIÓN</h2>
 					<p><?php echo get_post_meta($post->ID, 'mision', true); ?></p>
