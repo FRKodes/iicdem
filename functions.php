@@ -596,3 +596,69 @@ function create_member_post_type() {
     )
   );
 }
+
+add_action( 'init', 'create_event_post_type' );
+function create_event_post_type() {
+  register_post_type( 'evento',
+    array(
+      'labels' => array(
+        'name' => __( 'Eventos' ),
+        'singular_name' => __( 'Evento' ),
+        'add_new' => __( 'Agregar otro Evento' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'supports'=> array('title', 'editor', 'thumbnail'),
+    )
+  );
+}
+
+function printMonth($month_number){
+	$month = "";
+	if (!$month_number || $month_number < 1) 
+		return $month = "N/A";
+
+	switch ($month_number) {
+		case 01:
+			$month = "Ene";
+			break;
+		case 02:
+			$month = "Feb";
+			break;
+		case 03:
+			$month = "Mar";
+			break;
+		case 04:
+			$month = "Abr";
+			break;
+		case 05:
+			$month = "May";
+			break;
+		case 06:
+			$month = "Jun";
+			break;
+		case 07:
+			$month = "Jul";
+			break;
+		case 08:
+			$month = "Ago";
+			break;
+		case 09:
+			$month = "Sep";
+			break;
+		case 10:
+			$month = "Oct";
+			break;
+		case 11:
+			$month = "Nov";
+			break;
+		case 12:
+			$month = "Dec";
+			break;
+		default:
+			$month = "Dec";
+			break;
+	}
+
+	return $month;
+}

@@ -33,34 +33,21 @@
 		<div class="wrap">
 			
 			<div class="block-title"><span>PRÓXIMOS EVENTOS</span></div>
-
 			<div class="events-container">
-				<div class="item">
-					<div class="calendar">
-						<div class="month">FEB</div>
-						<div class="day">02</div>
-						<div class="triangle"></div>
-					</div>
-					<div class="description">Certificaciones internacionales ISAK 1, ISAK 2</div>
-				</div>
-
-				<div class="item">
-					<div class="calendar">
-						<div class="month">MAR</div>
-						<div class="day">12</div>
-						<div class="triangle"></div>
-					</div>
-					<div class="description">Certificaciones internacionales ISAK 1, ISAK 2</div>
-				</div>
-
-				<div class="item">
-					<div class="calendar">
-						<div class="month">ABR</div>
-						<div class="day">30</div>
-						<div class="triangle"></div>
-					</div>
-					<div class="description">Certificaciones internacionales ISAK 1, ISAK 2</div>
-				</div>
+				<?php 
+				$args = array( 'post_type' => 'evento', 'posts_per_page' => 3, 'orderby' => 'fecha', 'order' => 'DESC' );
+				$loop = new WP_Query( $args );
+				while ( $loop->have_posts() ) : $loop->the_post();?>
+					<div class="item">
+						<div class="calendar">
+							<div class="month mayus"><?php echo printMonth(substr(get_field('fecha'), 4,-2)); ?></div>
+							<div class="day"><?php echo substr(get_field('fecha'), 6); ?></div>
+							<div class="triangle"></div>
+						</div>
+						<div class="description"><a class="verde0" href="<?php the_field('link'); ?>" title="Ver detalle <?php the_title(); ?>"><?php the_title(); ?></a></div>
+					</div><?php
+				endwhile;
+				?>
 			</div>
 		</div>
 	</div>
