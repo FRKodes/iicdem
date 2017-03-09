@@ -26,11 +26,27 @@
 			<div class="block-title"><span>CONTÁCTANOS</span></div>
 			<div class="col-sm-6 m-top-20">
 				<h2 class="title verde0 mayus italic">Estamos aquí para ti</h2>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, magni ducimus. Ipsam hic numquam magnam explicabo, delectus porro quia vero eius eveniet quas aspernatur pariatur ullam, ipsa iure aut qui.
+				<p>
+					Recuerda usar la misma cuenta de correo con la que realizaste tu compra si fuera el caso, siempre estamos dispuesto a arreglar cualquier inconveniente o duda que tengas con tu compra, canalizándote al área correspondiente de forma breve.
+				</p>
+				<p>
+					Se lo mas claro y concreto posible, para que así nuestros asesores le den solución de inmediato a tu duda o comentario.
+				</p>
 			</div>
 			<div class="col-sm-6 m-top-20">
 				<h2 class="title verde0 mayus italic">Nuestras oficinas</h2>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci sequi dolorum vitae, dolorem, architecto culpa! Cupiditate facilis quas tenetur optio adipisci dolores fugiat, quibusdam laboriosam, necessitatibus sequi aliquid consectetur eveniet.
+				<p>
+					<b>IICDEM</b> <br>
+					Calle Horizonte #1357, <br>
+					Col. Jardines Plaza del Sol, C.P. 44510 <br>
+					Guadalajara, Jalisco, México.
+				</p>
+				<p>
+					<b>Clínica de Rehabilitación Esportiva</b> <br>
+					Calle Horizonte #1357, <br>
+					Col. Jardines Plaza del Sol, C.P. 44510 <br>
+					Guadalajara, Jalisco, México.
+				</p>
 			</div>
 		</div>
 

@@ -57,11 +57,11 @@
 		<div class="wrap">
 			<div class="block-title"><span>NUESTROS ALIADOS</span></div>
 			<div class="allies-container">
-				<div class="item-allie iisb"></div>
-				<div class="item-allie gse"></div>
-				<div class="item-allie esportiva"></div>
-				<div class="item-allie breezing"></div>
-				<div class="item-allie evolution"></div>
+				<div class="item-allie iisb"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/iisb.svg" alt="logo iisb"></div>
+				<div class="item-allie gse"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/g-se.svg" alt="logo g-se"></div>
+				<div class="item-allie"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/esportiva.svg" alt="logo esportiva"></div>
+				<div class="item-allie breezing"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/breezing.svg" alt="logo breezing"></div>
+				<div class="item-allie"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/evolution.svg" alt="logo evolution"></div>
 			</div>
 		</div>
 

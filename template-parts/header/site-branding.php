@@ -17,9 +17,9 @@
 
 		<div class="site-branding-text">
 			<?php if ( is_front_page() ) : ?>
-				<h1 class="site-title italic"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">INSTITUTO IBEROAMERICANO<br><b>DE CIENCIAS DEL DEPORTE</b><br>Y EL MOVIMIENTO HUMANO</a></h1>
+				<h1 class="site-title italic"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">INSTITUTO IBEROAMERICANO<br><b>DE CIENCIAS DEL DEPORTE</b><br><span>Y EL MOVIMIENTO HUMANO</span></a></h1>
 			<?php else : ?>
-				<p class="site-title italic"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">INSTITUTO IBEROAMERICANO<br><b>DE CIENCIAS DEL DEPORTE</b><br>Y EL MOVIMIENTO HUMANO</a></p>
+				<p class="site-title italic"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">INSTITUTO IBEROAMERICANO<br><b>DE CIENCIAS DEL DEPORTE</b><br><span>Y EL MOVIMIENTO HUMANO</span></a></p>
 			<?php endif; ?>
 		</div><!-- .site-branding-text -->
 		

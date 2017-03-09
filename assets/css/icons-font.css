@@ -44,24 +44,42 @@
 .icon-arrow-right:before {
   content: "\62";
 }
-.icon-birrete:before {
-  content: "\63";
-}
 .icon-bulls-eye:before {
   content: "\64";
 }
 .icon-facebook:before {
   content: "\65";
 }
-.icon-instagram:before {
-  content: "\66";
-}
 .icon-mail:before {
   content: "\68";
 }
 .icon-plane:before {
-  content: "\69";
+  content: "\67";
 }
 .icon-twitter:before {
+  content: "\69";
+}
+.icon-instagram:before {
   content: "\6a";
+}
+.icon-birrete:before {
+  content: "\63";
+}
+.icon-globo:before {
+  content: "\66";
+}
+.icon-lapiz:before {
+  content: "\6b";
+}
+.icon-manzana:before {
+  content: "\6c";
+}
+.icon-regla:before {
+  content: "\6d";
+}
+.icon-phone:before {
+  content: "\6e";
+}
+.icon-mail-env:before {
+  content: "\6f";
 }

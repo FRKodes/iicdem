@@ -8,6 +8,8 @@ twitter = #32b4e5
 instagram = #d2bdaa
 mail = #b3b3b3
 
+a
+	text-decoration none !important
 .azul
 	color azul
 .verde0
@@ -18,6 +20,8 @@ mail = #b3b3b3
 	font-style italic
 .m-top-20
 	margin-top 20px
+.gray-back
+	background #f2f2f2
 .hidden_
 	display none
 .btn.btn-primary
@@ -122,6 +126,10 @@ body:not(.title-tagline-hidden) .site-branding-text
 h1.site-title
 	color white
 	font-size 1em
+	b
+		font-size 1.089em
+	span
+		font-size 1.05em
 .nav-button
 	display inline-block
 	float right
@@ -239,17 +247,15 @@ h1.site-title
 	justify-content space-around
 	.item-allie
 		margin-top 20px
-		width 103px
-		height 75px
-		background transparent url(./assets/images/sprite_logos_mobile.jpg) no-repeat left top
-		&.gse
-			background-position -116px 0px
-		&.esportiva
-			background-position -231px 0px
+		width 45%
+		height auto
+		vertical-align middle
 		&.breezing
-			background-position -347px 0px
-		&.evolution
-			background-position -463px 0px
+			padding-top 10%
+		img
+			width 100%
+			height auto
+			display inline-block
 .single-featured-image-header
 	border none
 .icon-bulls-eye
@@ -259,12 +265,18 @@ h1.site-title
 	text-align center
 body.page:not(.twentyseventeen-front-page)
 	.entry-title
-		font-size 1.8em
+		font-size 1.3em
 		margin -65px 0 50px 0
 		color white
 		text-shadow 0px 0px 5px gris2
 	.main-navigation-container
 		margin-top 50px
+	.site-title
+		font-size 1em
+		b
+			font-size 1.089em
+		span
+			font-size 1.05em
 img.about
 	max-width 60%
 #miembros-fundadores
@@ -273,9 +285,10 @@ img.about
 		margin-bottom 10px
 .members-container
 	.member-item
-		margin-bottom 40px
+		margin-bottom 60px
 		.title
 			text-align center
+			font-size 1.3em
 		.photo
 			text-align center
 			.member-photo-container
@@ -293,6 +306,27 @@ img.about
 				z-index 1
 			.position
 				margin-bottom 10px
+				margin-top -20px
+				position relative
+				z-index 1
+				font-size 1.3em
+			.contact-info
+				padding 15px 25px
+				margin-bottom 20px
+				vertical-align middle
+				.line
+					display flex
+					&:first-of-type
+						margin-bottom 15px
+				span
+					color verde0
+					margin-right 10px
+					font-size 2em
+					line-height 1em
+				a
+					text-decoration none !important
+					color azul
+					font-size 1.25em
 			.review-link
 				background azul
 				color white
@@ -363,14 +397,33 @@ input[type="text"]
 			display inline-block
 			font-size 3em
 			margin 0 5px
+			a
+				color black
+				transition color .5s ease
+				&:hover
+				&:focus
+				&:active
+					text-decoration none
 			.icon-facebook
 				color facebook
+				&:hover
+					color rgba(facebook, .6)
+					transition color .5s ease
 			.icon-twitter
 				color twitter
+				&:hover
+					color rgba(twitter, .6)
+					transition color .5s ease
 			.icon-instagram
 				color instagram
+				&:hover
+					color rgba(instagram, .6)
+					transition color .5s ease
 			.icon-mail
 				color mail
+				&:hover
+					color rgba(mail, .6)
+					transition color .5s ease
 @media screen and (min-width: 380px)
 	.logo-container
 		width 200px
@@ -417,6 +470,16 @@ input[type="text"]
 	#miembros-fundadores
 		.entry-title
 			margin-top -70px
+	.members-container
+		.member-item
+			.photo
+				.contact-info
+					width 400px
+					margin-left auto
+					margin-right auto
+					padding 15px 65px
+					.line
+						margin-bottom 15px
 @media screen and (min-width: 650px)
 	#miembros-fundadores
 		.entry-title
@@ -436,7 +499,7 @@ input[type="text"]
 	.site-branding-text
 		display inline-block
 		left 210px
-		top 7px
+		top 4px
 	body:not(.title-tagline-hidden)
 		.site-branding-text
 			position absolute
@@ -526,6 +589,16 @@ input[type="text"]
 		padding-top 30px
 	img.about
 		max-width 40%
+	.allies-container
+		margin-top 30px
+		.item-allie
+			width 30%
+			&.iisb
+				padding-top 3%
+			&.gse
+				padding-top 5%
+			&.breezing
+				padding-top 5%
 	body.page:not(.twentyseventeen-front-page)
 		.entry-title
 			font-size 3em
@@ -550,6 +623,9 @@ input[type="text"]
 			&:last-of-type
 				margin-bottom 0
 			.photo
+				.member-photo-container
+					width 240px
+					height 240px
 				.title
 					padding-left 10px
 					padding-right 10px
@@ -557,6 +633,12 @@ input[type="text"]
 					font-size 1.4em
 				.btn.btn-primary
 					width auto
+				.contact-info
+					width 100%
+					padding 15px 45px
+					margin-top 20px
+					.line
+						margin-bottom 15px
 				.review-link
 					display inline-block
 					padding-left 50px
@@ -565,6 +647,22 @@ input[type="text"]
 				padding-top 15px
 				line-height 26px
 				font-size 1.2em
+				.title
+					text-align left
+				.review-link
+					display inline-block
+					padding-left 50px
+					padding-right 50px
+					background azul
+					width auto
+				ul
+					text-align left
+					li
+						margin-bottom 10px
+						display inline-block
+				span
+					color verde0
+					font-size 1.1em
 	#map
 		margin-top 40px
 	.site-footer
@@ -643,18 +741,11 @@ input[type="text"]
 	.allies-container
 		margin-top 30px
 		.item-allie
-			margin-top 20px
-			width 151px
-			height 110px
-			background transparent url(./assets/images/sprite_logos.jpg) no-repeat left -15px
+			width 16%
 			&.gse
-				background-position -169px 0px
-			&.esportiva
-				background-position -339px 0px
+				padding-top 3%
 			&.breezing
-				background-position -509px 0px
-			&.evolution
-				background-position -680px 0px
+				padding-top 4%
 	.single-featured-image-header
 		max-width 1000px
 		margin 0 auto
@@ -671,15 +762,30 @@ input[type="text"]
 			.photo
 				.member-photo-shadow-container
 					margin-top -60px
+				.member-photo-container
+					width 260px
+					height 260px
 				.position
 					font-size 1.5em
 					margin-top -30px
 					position relative
 					z-index 1
+				.contact-info
+					margin-top -20px
+					position relative
+					z-index 1
+					padding 10px 80px
+					.line
+						margin-bottom 5px
 			.info
-				padding-top 30px
-				line-height 30px
+				padding-top 0
 				font-size 1.3em
+				.title
+					margin-bottom 0
+				ul
+					margin-top 10px
+					li
+						margin-bottom 5px
 	#map
 		height 420px
 		margin-top 90px

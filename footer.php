@@ -28,10 +28,10 @@
 					</div>
 					<div class="col-sm-4 col-right">
 						<ul class="social">
-							<li><a href="#" title="Ir al perfil de IICDEM en Facebook" target="_blank" class="icon-facebook"></a></li>
-							<li><a href="#" title="Ir al perfil de IICDEM en Twitter" target="_blank" class="icon-twitter"></a></li>
-							<li><a href="#" title="Ir al perfil de IICDEM en Instagram" target="_blank" class="icon-instagram"></a></li>
-							<li><a href="#" title="Enviar un correo de contacto" class="icon-mail"></a></li>
+							<li><a href="https://www.facebook.com/IICDEM" title="Ir al perfil de IICDEM en Facebook" target="_blank" class="icon-facebook"></a></li>
+							<li><a href="https://twitter.com/IICDEM" title="Ir al perfil de IICDEM en Twitter" target="_blank" class="icon-twitter"></a></li>
+							<li><a href="https://www.instagram.com/iicdem" title="Ir al perfil de IICDEM en Instagram" target="_blank" class="icon-instagram"></a></li>
+							<li><a href="mailto:contacto@iicdem.com" title="Enviar un correo de contacto" class="icon-mail"></a></li>
 						</ul>
 					</div>
 				</div>
