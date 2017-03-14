@@ -608,7 +608,7 @@ function create_event_post_type() {
       ),
       'public' => true,
       'has_archive' => false,
-      'supports'=> array('title', 'editor', 'thumbnail'),
+      'supports'=> array('title', 'editor', 'thumbnail', 'page-attributes'),
     )
   );
 }
