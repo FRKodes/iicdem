@@ -4,8 +4,26 @@
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
-		<h1>Evento page</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet provident sunt minima perferendis illum quos consequatur quo mollitia recusandae in, enim et, corrupti, quibusdam aut iusto nihil quisquam aliquam! Voluptate.</p>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 single-inner-text">
+					<h1><?php the_title(); ?></h1>
+
+					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						<?php the_content(); ?>
+						<?php if (get_field('adjunto')) { ?>
+							<p><a target="_blank" href="<?php the_field('adjunto'); ?>">Mayores informes haciendo clic aquí</a></p>
+						<?php } ?>
+					<?php endwhile; ?>
+					<?php else : ?>
+						<div <?php post_class(); ?> id="post-<?php the_ID(); ?>"><h1>Not Found</h1></div>
+					<?php endif; ?>
+
+					<h2><a href="/pre-registro?id=<?php the_ID(); ?>">Regístrate aquí</a></h2>
+
+				</div>
+			</div>
+		</div>
 
 	</main><!-- .site-main -->
 

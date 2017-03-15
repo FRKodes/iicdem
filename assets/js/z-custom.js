@@ -77,3 +77,59 @@ $(function(){
     };
   var $validate = $('#contactForm').validate(formSettings).data('validate');
 });
+
+$(function(){ 
+  var formSettings = {
+    singleError : function($field, rules){ 
+      $field.closest('.form-group').removeClass('valid').addClass('error');
+      $('.alert_fields').fadeIn();
+    },
+    singleSuccess : function($field, rules){ 
+      $field.closest('.form-group').removeClass('error').addClass('valid');
+      $('.alert_fields').fadeOut();
+    },
+    overallSuccess : function(){
+      var form      = $('#preregistro'),
+        curso       = form.find( "input[name='curso']").val(),
+        nombre      = form.find( "input[name='nombre']").val(),
+        genero      = form.find( "select[name='genero']").val(),
+        n_estudios  = form.find( "select[name='nivel_estudios']").val(),
+        fnacimiento = form.find( "input[name='fnacimiento']").val(),
+        direccion   = form.find( "input[name='direccion']").val(),
+        lnacimiento = form.find( "input[name='lnacimiento']").val(),
+        email       = form.find( "input[name='email']").val(),
+        telefono    = form.find( "input[name='telefono']").val(),
+        institucion = form.find( "input[name='institucion']").val(),
+        cv          = form.find( "textarea[name='cv']").val(),
+        motivos     = form.find( "textarea[name='motivos']").val(),
+        medio_info  = form.find( "input[name='medio_info']").val(),
+        action      = form.attr( "action"),
+        url         = action;
+
+      var posting = $.post(
+        url, {  nombre: nombre,
+                curso: curso,
+                genero: genero,
+                n_estudios: n_estudios,
+                fnacimiento: fnacimiento,
+                direccion: direccion,
+                lnacimiento: lnacimiento,
+                email: email,
+                telefono: telefono,
+                institucion: institucion,
+                cv: cv,
+                motivos: motivos,
+                medio_info: medio_info
+              }
+      );
+      posting.done(function( data ){
+        console.log(data);
+        $('#preregistro')[0].reset();
+        $('.email-sent-alert').fadeIn().delay(3000).fadeOut();
+      });
+    },
+    overallError : function($form, fields){ /*Do nothing, just show the error fields*/ },
+      autoDetect : true, debug : true
+    };
+  var $validate = $('#preregistro').validate(formSettings).data('validate');
+});

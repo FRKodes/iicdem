@@ -1,4 +1,5 @@
 azul = #004667
+rojo = red
 gris0 = #e6e6e6
 gris1 = #b2b2b2
 gris2 = #515151
@@ -12,6 +13,8 @@ a
 	text-decoration none !important
 .azul
 	color azul
+.rojo
+	color rojo
 .verde0
 	color verde0
 .mayus
@@ -341,7 +344,7 @@ form
 	position relative
 .error
 	.form-control
-		background rgba(red, .2)
+		background rgba(red, .3)
 		transition background .5s ease
 .alert_fields
 	background rgba(red, .6)
@@ -362,6 +365,10 @@ form
 	width 100%
 	b
 		font-size 1.6em
+	&.pre-registro
+		top initial
+		bottom 100px
+		font-size 1.8em
 #map
 	display block
 	height 300px
@@ -485,6 +492,8 @@ input[type="text"]
 		.entry-title
 			margin-top -80px
 @media screen and (min-width: 768px)
+	.has-sidebar:not(.error404) #primary
+		width 100%
 	.triangle
 		width 0
 		height 0
