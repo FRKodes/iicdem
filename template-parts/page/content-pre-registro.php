@@ -82,10 +82,10 @@
 		</div>
 		<div class="form-group">
 			<label for="medio_info">Medio por el cual se enteró de este curso <span class="rojo">*</span></label>
-			<input type="radio" name="medio_info" checked >Correo electrónico</label> <br>
-			<input type="radio" name="medio_info">Twitter</label><br>
-			<input type="radio" name="medio_info">Facebook IICDEM</label><br>
-			<input type="radio" name="medio_info">Otro</label>
+			<input type="radio" value="Correo Electrónico" name="medio_info" checked >Correo electrónico</label> <br>
+			<input type="radio" value="Twitter" name="medio_info" >Twitter</label><br>
+			<input type="radio" value="Facebook" name="medio_info" >Facebook IICDEM</label><br>
+			<input type="radio" value="Otro" name="medio_info" >Otro</label>
 		</div>
 		
 		<div class="form-group">

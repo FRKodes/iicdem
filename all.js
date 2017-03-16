@@ -1254,7 +1254,7 @@ $(function(){
         institucion = form.find( "input[name='institucion']").val(),
         cv          = form.find( "textarea[name='cv']").val(),
         motivos     = form.find( "textarea[name='motivos']").val(),
-        medio_info  = form.find( "input[name='medio_info']").val(),
+        medio_info  = form.find( "input[name='medio_info']:checked").val(),
         action      = form.attr( "action"),
         url         = action;
 
