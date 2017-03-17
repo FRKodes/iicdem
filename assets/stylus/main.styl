@@ -33,8 +33,13 @@ a
 	&.azul
 		background azul
 		color white
-.single-featured-image-header
-	background none
+	&.rojo
+		background #a50505
+		color white
+		border-color #a50505
+.single-inner-text
+	span
+		color verde0
 .triangle
 	width 0
 	height 0
@@ -54,7 +59,8 @@ body
 	display block
 	background transparent
 .single-featured-image-header
-	padding-top 25px
+	background none
+	padding-top 20px
 .site-branding
 	position fixed
 	z-index 100
@@ -88,6 +94,8 @@ body
 		background transparent
 		border none
 		position fixed
+		nav
+			margin-top 60px
 		.wrap
 			overflow hidden
 		.current-menu-item > a

@@ -12,14 +12,14 @@
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 						<?php the_content(); ?>
 						<?php if (get_field('adjunto')) { ?>
-							<p><a target="_blank" href="<?php the_field('adjunto'); ?>">Mayores informes haciendo clic aquí</a></p>
+							<p class="text-center"><a target="_blank" class="btn btn-primary azul" style="width:auto" href="<?php the_field('adjunto'); ?>">Mayores informes haciendo clic aquí</a></p>
 						<?php } ?>
 					<?php endwhile; ?>
 					<?php else : ?>
 						<div <?php post_class(); ?> id="post-<?php the_ID(); ?>"><h1>Not Found</h1></div>
 					<?php endif; ?>
 
-					<h2><a href="/pre-registro?id=<?php the_ID(); ?>">Regístrate aquí</a></h2>
+					<h2 class="text-center"><a class="btn btn-primary rojo" style="width:auto" href="/pre-registro?id=<?php the_ID(); ?>">Regístrate aquí</a></h2>
 
 				</div>
 			</div>

@@ -1,7 +1,9 @@
 <?php $postId = $_GET['id']; ?>
-<?php if ($postId) {
-		echo get_the_post_thumbnail( $postId, 'original' );
-} ?>
+<?php if ($postId) { ?>
+		<div class="single-featured-image-header">
+			<?php echo get_the_post_thumbnail( $postId, 'original' );?>
+		</div>
+<?php } ?>
 
 <h1 class="text-center">Pre-registro 
 	<?php if ($postId) {
