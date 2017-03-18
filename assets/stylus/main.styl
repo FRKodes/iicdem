@@ -1,4 +1,5 @@
 azul = #004667
+azul_ = #66C6C4
 rojo = red
 gris0 = #e6e6e6
 gris1 = #b2b2b2
@@ -8,15 +9,20 @@ facebook = #4a70af
 twitter = #32b4e5
 instagram = #d2bdaa
 mail = #b3b3b3
-
 a
 	text-decoration none !important
+	&.blanco
+		color white
 .azul
 	color azul
+.azul_
+	color azul_
 .rojo
 	color rojo
 .verde0
 	color verde0
+.blanco
+	color white
 .mayus
 	text-transform uppercase
 .italic
@@ -33,6 +39,10 @@ a
 	&.azul
 		background azul
 		color white
+	&.azul_
+		background azul_
+		color white
+		border-color azul_
 	&.rojo
 		background #a50505
 		color white
@@ -40,6 +50,10 @@ a
 .single-inner-text
 	span
 		color verde0
+	h3
+		padding-top 0
+		padding-bottom 50px
+		
 .triangle
 	width 0
 	height 0

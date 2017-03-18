@@ -18,11 +18,22 @@
 		while ( $loop->have_posts() ) : $loop->the_post();?>
 
 			<div class="item">
-				<img src="<?php the_post_thumbnail(); ?>" alt="<?php the_content(); ?>">
-				<div class="banner-info-container">
-					<div class="banner-title mayus"> <?php the_title(); ?></div>
-					<div class="banner-description mayus"> <?php the_content(); ?> </div>
-				</div>
+				<?php if (get_field('link')) { ?>
+					<a class="blanco" href="<?php the_field('link') ?>" title="Ver detalle <?php the_title() ?>">
+						<?php the_post_thumbnail(); ?>
+						<div class="banner-info-container">
+							<div class="banner-title mayus"> <?php the_title(); ?></div>
+							<div class="banner-description mayus"> <?php the_content(); ?> </div>
+						</div>
+					</a>
+				<?php } else { ?>
+					<?php the_post_thumbnail(); ?>
+					<div class="banner-info-container">
+						<div class="banner-title mayus"> <?php the_title(); ?></div>
+						<div class="banner-description mayus"> <?php the_content(); ?> </div>
+					</div>
+				<?php } ?>
+				
 			</div><?php
 
 		endwhile;
