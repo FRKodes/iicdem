@@ -1243,6 +1243,7 @@ $(function(){
     overallSuccess : function(){
       var form      = $('#preregistro'),
         curso       = form.find( "input[name='curso']").val(),
+        modalidad   = form.find( "select[name='modalidad']").val(),
         nombre      = form.find( "input[name='nombre']").val(),
         genero      = form.find( "select[name='genero']").val(),
         n_estudios  = form.find( "select[name='nivel_estudios']").val(),
@@ -1261,6 +1262,7 @@ $(function(){
       var posting = $.post(
         url, {  nombre: nombre,
                 curso: curso,
+                modalidad: modalidad,
                 genero: genero,
                 n_estudios: n_estudios,
                 fnacimiento: fnacimiento,

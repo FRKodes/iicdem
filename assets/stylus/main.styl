@@ -13,6 +13,9 @@ a
 	text-decoration none !important
 	&.blanco
 		color white
+.main-navigation-container.alpha .main-navigation li.current-menu-item a
+	color black !important
+	transition color .5s ease-in
 .azul
 	color azul
 .azul_
@@ -69,6 +72,7 @@ body
 	font-family 'Roboto', sans-serif
 	font-size 1.15em
 	text-align justify
+	-webkit-text-size-adjust 100%
 .js .main-navigation ul
 	display block
 	background transparent
@@ -93,21 +97,28 @@ body
 	z-index 1
 	width 260px
 	display block
-	opacity 0
+	height 100%
 	&.alpha
-		opacity 1
-		transition .5s
+		.main-navigation li
+			a
+				color white
+				opacity 1
+				transition all .7s ease-in
 	.main-navigation
 		ul.menu
 			border none
 		li
 			border-bottom 1px solid rgba(gris2, .1)
+			a
+				color gris1
+				opacity 0
+				transition all .5s ease-out
 			&:last-of-type
 				border none
 	.navigation-top
 		background transparent
 		border none
-		position fixed
+		position absolute
 		nav
 			margin-top 60px
 		.wrap

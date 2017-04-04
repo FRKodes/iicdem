@@ -14,14 +14,14 @@
 <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
 	<form action="/sendmail-pre-registro.php" id="preregistro" method="POST">
 		
-		<!-- <div class="form-group">
+		<div class="form-group">
 			<label for="modalidad">Modalidad en la cual desea inscribirse <span class="rojo">*</span></label>
 			<select name="modalidad" id="modalidad" class="form-control" data-validate="required">
 				<option value="">Selecciona una opción</option>
 				<option value="presencial">Presencial</option>
 				<option value="online">A distancia (Plataforma G-SE)</option>
 			</select>
-		</div> -->
+		</div>
 		
 		<input type="hidden" name="curso" value="<?php echo get_the_title( $postId); ?>">
 		
@@ -34,7 +34,7 @@
 			<select name="genero" id="genero" class="form-control" data-validate="required">
 				<option value="">Selecciona una opción</option>
 				<option value="Masculino">Masculino</option>
-				<option value="Femenido">Femenido</option>
+				<option value="Femenino">Femenino</option>
 			</select>
 		</div>
 		<div class="form-group">
