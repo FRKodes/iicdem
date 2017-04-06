@@ -19,7 +19,14 @@
 						<div <?php post_class(); ?> id="post-<?php the_ID(); ?>"><h1>Not Found</h1></div>
 					<?php endif; ?>
 
-					<h2 class="text-center"><a class="btn btn-primary azul" style="width:auto" href="/pre-registro?id=<?php the_ID(); ?>">Regístrate aquí</a></h2>
+					<h2 class="text-center">
+						<?php if (get_field('link')) { ?>
+							<a class="btn btn-primary azul" style="width:auto" href="<?php the_field('link'); ?>">Regístrate aquí</a>
+						<?php } else { ?>
+							<a class="btn btn-primary azul" style="width:auto" href="/pre-registro?id=<?php the_ID(); ?>">Regístrate aquí</a>
+						<?php } ?>
+						
+					</h2>
 
 				</div>
 			</div>
