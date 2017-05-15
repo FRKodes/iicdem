@@ -55,13 +55,7 @@
 							<div class="day"><?php echo substr(get_field('fecha'), 6); ?></div>
 							<div class="triangle"></div>
 						</div>
-						<div class="description">
-							<?php if (get_field('link')) { ?>
-								<a class="verde0" href="<?php the_field('link'); ?>" title="Ver detalle <?php the_title(); ?>"><?php the_title(); ?></a>
-							<?php }else{ ?>
-								<a class="verde0" href="<?php echo get_permalink( $post->ID ); ?>" title="Ver detalle <?php the_title(); ?>"><?php the_title(); ?></a>
-							<?php } ?>
-						</div>
+						<div class="description"><a class="verde0" href="<?php echo get_permalink( $post->ID ); ?>" title="Ver detalle <?php the_title(); ?>"><?php the_title(); ?></a></div>
 					</div><?php
 				endwhile;
 				?>
