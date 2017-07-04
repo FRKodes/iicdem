@@ -613,6 +613,22 @@ function create_event_post_type() {
   );
 }
 
+add_action( 'init', 'create_ponente_post_type' );
+function create_ponente_post_type() {
+  register_post_type( 'ponente',
+    array(
+      'labels' => array(
+        'name' => __( 'Ponentes' ),
+        'singular_name' => __( 'Ponente' ),
+        'add_new' => __( 'Agregar otro Ponente' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'supports'=> array('title', 'editor', 'thumbnail', 'page-attributes'),
+    )
+  );
+}
+
 function printMonth($month_number){
 	$month = "";
 	if (!$month_number || $month_number < 1) 

@@ -28,6 +28,13 @@ $(document).ready(function() {
     nextArrow: '<button type="button" class="slick-next icon-arrow-right"><span>Next</span></button>'
   });
 
+  $('.ponente-item').hover(
+    function() {
+      $( this ).addClass( "hover" );
+    }, function() {
+      $( this ).removeClass( "hover" );
+  });
+
  });
 
 /*-------------------------------

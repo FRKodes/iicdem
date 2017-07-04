@@ -39,6 +39,7 @@
 				<div class="col-sm-6 col-sm-offset-3 disclaimer azul">
 					<p>&copy; IICDEM Todos los derechos reservados</p>
 					<p>No está permitida la reproducción parcial o total de este sitio web, su tratamiento informático, la transmisión de ninguna forma o por cualquier medio, ya sea electrónico o mecánico u otros métodos sin el permiso previo y escrito de los titulares de los derechos de autor.</p>
+					<p class="text-center">Desarrollado por <strong><a href="http://www.blueterrier.mx" target="_blank">Blue Terrier</a></strong></p>
 				</div>
 
 			</div><!-- .wrap -->
@@ -46,7 +47,16 @@
 	</div><!-- .site-content-contain -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-84802922-4', 'auto');
+  ga('send', 'pageview');
+</script>
 <script src="/wp-content/themes/iicdem/assets/js/jquery.js"></script>
+<script src="/wp-content/themes/iicdem/assets/js/bootstrap.js"></script>
 <script src="/wp-content/themes/iicdem/assets/js/slick.js"></script>
 <script src="/wp-content/themes/iicdem/assets/js/z-custom.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChauYCbUFFlNDoI25Xrwg6nIeQpIOjJZU&callback=initMap"></script>

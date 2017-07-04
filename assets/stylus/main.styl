@@ -18,8 +18,14 @@ a
 .main-navigation-container.alpha .main-navigation li.current-menu-item a
 	color black !important
 	transition color .5s ease-in
+.no-shadow
+	text-shadow none !important
+.entry-title.azul.no-shadow
+	margin-bottom 30px !important
 .azul
 	color azul
+.azul-text
+	color azul !important
 .azul_
 	color azul_
 .rojo
@@ -28,16 +34,34 @@ a
 	color verde0
 .blanco
 	color white
+.black
+	color black
 .mayus
 	text-transform uppercase
 .italic
 	font-style italic
 .m-top-20
 	margin-top 20px
+.m-t-80
+	margin-top 80px
+.m-t-120
+	margin-top 120px
 .gray-back
 	background #f2f2f2
 .hidden_
 	display none
+.modal-header
+	background rgba(azul, .95)
+	h4
+		color white
+		font-size 1.4em
+		padding-top 0
+.close
+	color white
+	opacity 1
+.modal-footer
+	background rgba(azul, .95) url(assets/images/badge-simposio.png) no-repeat 10px 10px
+	background-size 90px
 .btn.btn-primary
 	border-radius 0px
 	width 100%
@@ -64,7 +88,14 @@ a
 		height auto
 		overflow hidden
 		padding 10px
-		text-align left
+		.name
+			text-align center
+			font-weight bold
+			font-size 1.1em
+	.photo
+		.shadow
+			height 0
+			display none
 .triangle
 	width 0
 	height 0
@@ -848,3 +879,38 @@ input[type="text"]
 			float left
 		.logo
 			width 200px
+@media screen and (min-width: 1200px)
+	.ponente-item
+		&.hover
+			.photo .shadow
+				margin-top -85px
+				transition margin-top .3s ease
+		.photo
+			height 255px
+			overflow hidden
+			.shadow
+				height 60px
+				display block
+				overflow hidden
+				margin-top 0
+				position relative
+				transition margin-top .3s ease
+				background rgba(black, .7)
+				background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+				background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+				background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+				.flag
+					position absolute
+					right 10px
+					bottom 10px
+					width 40px
+					height auto
+					display block
+				.badge
+					position absolute
+					left 10px
+					bottom 10px
+					width 80px
+					height auto
+					display block
+					background transparent
