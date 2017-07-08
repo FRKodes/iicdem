@@ -167,7 +167,7 @@
 
 
 
-			<div class="row">
+			<div class="">
 				<?php the_field('texto_final') ?>
 			</div>
 
