@@ -158,14 +158,7 @@
 					</h2>
 				</div>
 
-
 			</div>
-
-
-
-			
-
-
 
 			<div class="">
 				<?php the_field('texto_final') ?>
@@ -182,7 +175,26 @@
 					<a class="btn btn-primary azul" style="width:auto" target="_blank" href="<?php the_field('link_registro_carteles'); ?>">Regístrate aquí al concurso de carteles</a>
 				<?php } ?>
 			</div>
+			
+			<?php 
+			$args_hoteles = array( 'post_type' => 'hotel_sede', 'posts_per_page' => -1, 'meta_query' => array('key' => 'id_evento', 'value' => $post->ID, 'type' => 'NUMERIC', 'compare'	=> '=') );
+
+			$loop_hoteles = new WP_Query( $args_hoteles );
+			if ($loop_hoteles->have_posts()) { ?> <h2>HOTELES SEDE</h2> <?php } ?>
+			<div class="row hoteles-sede-container"><?php
+				while ( $loop_hoteles->have_posts() ) : $loop_hoteles->the_post(); ?>
+					<div class="col-xs-6 col-sm-3 hotel-sede-item">
+						<a href="<?php the_field('link_info') ?>" target="_blank" title="Ponente <?php the_title(); ?>">
+							<?php the_post_thumbnail(); ?>
+						</a>
+					</div>
+				<?php endwhile;
+				wp_reset_postdata(); ?>
+			</div>
+
 		</div>
+
+
 
 	</main><!-- .site-main -->
 

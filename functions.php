@@ -412,7 +412,7 @@ function twentyseventeen_scripts() {
 	wp_enqueue_style( 'iicdem-fonts', twentyseventeen_fonts_url(), array(), null );
 
 	// Theme stylesheet.
-	wp_enqueue_style( 'iicdem-style', get_stylesheet_directory_uri().'/iicdem-styles.css' );
+	wp_enqueue_style( 'iicdem-style', get_stylesheet_directory_uri().'/iicdem-styles.css', array(), '1.0' );
 
 	// Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
 	if ( is_customize_preview() ) {
@@ -621,6 +621,22 @@ function create_ponente_post_type() {
         'name' => __( 'Ponentes' ),
         'singular_name' => __( 'Ponente' ),
         'add_new' => __( 'Agregar otro Ponente' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'supports'=> array('title', 'editor', 'thumbnail', 'page-attributes'),
+    )
+  );
+}
+
+add_action( 'init', 'create_hotel_sede_post_type' );
+function create_hotel_sede_post_type() {
+  register_post_type( 'hotel_sede',
+    array(
+      'labels' => array(
+        'name' => __( 'Hoteles Sedes' ),
+        'singular_name' => __( 'Hotel Sede' ),
+        'add_new' => __( 'Agregar otro Hotel Sede' )
       ),
       'public' => true,
       'has_archive' => false,
