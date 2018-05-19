@@ -52,6 +52,7 @@
 					<div class="item">
 						<div class="calendar">
 							<div class="month mayus"><?php echo printMonth(substr(get_field('fecha'), 4,-2)); ?></div>
+							<input type="hidden" value="<?php echo printMonth(substr(get_field('fecha'), 4,-2)); ?>">
 							<div class="day"><?php echo substr(get_field('fecha'), 6); ?></div>
 							<div class="triangle"></div>
 						</div>
