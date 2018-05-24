@@ -300,15 +300,20 @@ h1.site-title
 .home-next-events
 	.events-container
 		margin-top 20px
-		display flex
-		justify-content space-around
+		width 100%
+		overflow hidden
+		.slick-arrow
+			display none !important
+		.slick-dots
+			margin-top 10px
 		.item
 			text-align center
-			width 30%
+			display inline-block
+			width 100%
 			.calendar
 				margin 0 auto
 				position relative
-				width 95%
+				width 80%
 				.month
 					background azul
 					color white
@@ -324,6 +329,7 @@ h1.site-title
 			.description
 				color verde0
 				margin-top 10px
+				padding 0 25px
 .allies-container
 	display flex
 	flex-wrap wrap

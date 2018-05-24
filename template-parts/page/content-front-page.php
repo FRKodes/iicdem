@@ -46,7 +46,7 @@
 			<div class="block-title"><span>PRÓXIMOS EVENTOS</span></div>
 			<div class="events-container">
 				<?php 
-				$args = array( 'post_type' => 'evento', 'posts_per_page' => 3, 'orderby' => 'fecha', 'order' => 'DESC' );
+				$args = array( 'post_type' => 'evento', 'orderby' => 'fecha', 'order' => 'DESC' );
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) : $loop->the_post();?>
 					<div class="item">
