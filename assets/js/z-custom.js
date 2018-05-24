@@ -32,6 +32,7 @@ $(document).ready(function() {
     dots: true,
     infinite: true,
     speed: 300,
+    autoplaySpeed: 4000,
     autoplay: true,
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -54,6 +55,46 @@ $(document).ready(function() {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
+  $('.allies-container').slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    autoplaySpeed: 5000,
+    autoplay: true,
+    slidesToShow: 5,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
           slidesToScroll: 2
         }
       },

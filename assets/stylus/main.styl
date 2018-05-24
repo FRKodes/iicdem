@@ -331,19 +331,26 @@ h1.site-title
 				margin-top 10px
 				padding 0 25px
 .allies-container
-	display flex
-	flex-wrap wrap
-	justify-content space-around
+	display block
+	.slick-arrow
+		display none !important
 	.item-allie
 		margin-top 20px
-		width 45%
-		height auto
-		vertical-align middle
+		height 150px
+		overflow hidden
+		display flex
+		justify-content center
+		align-items center
+		padding-top 10px
+		padding-bottom 10px
 		&.breezing
-			padding-top 10%
+			height 100%
+			width auto
+			display inline-block
+			height 150px
 		img
-			width 100%
-			height auto
+			height 100%
+			width auto
 			display inline-block
 .single-featured-image-header
 	border none
@@ -558,6 +565,18 @@ input[type="text"]
 			font-size 2.8em
 		.banner-description
 			font-size 1.6em
+	.allies-container
+		.item-allie
+			img
+				width 80%
+				height auto
+			&.breezing
+				display flex
+				justify-content center
+				align-items center
+				img
+					width 80%
+					height auto
 	body.page:not(.twentyseventeen-front-page)
 		.entry-title
 			font-size 2.4em
@@ -689,13 +708,16 @@ input[type="text"]
 	.allies-container
 		margin-top 30px
 		.item-allie
-			width 30%
-			&.iisb
-				padding-top 3%
-			&.gse
-				padding-top 5%
+			img
+				width 80%
+				height auto
 			&.breezing
-				padding-top 5%
+				display flex
+				justify-content center
+				align-items center
+				img
+					width 80%
+					height auto
 	body.page:not(.twentyseventeen-front-page)
 		.entry-title
 			font-size 3em
@@ -835,14 +857,6 @@ input[type="text"]
 						font-size 5em
 				.description
 					font-size 1.6em
-	.allies-container
-		margin-top 30px
-		.item-allie
-			width 16%
-			&.gse
-				padding-top 3%
-			&.breezing
-				padding-top 4%
 	.single-featured-image-header
 		max-width 1000px
 		margin 0 auto
