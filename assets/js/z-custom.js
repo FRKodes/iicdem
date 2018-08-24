@@ -75,7 +75,7 @@ $(document).ready(function() {
     autoplaySpeed: 5000,
     autoplay: true,
     slidesToShow: 5,
-    slidesToScroll: 4,
+    slidesToScroll: 3,
     responsive: [
       {
         breakpoint: 1200,
