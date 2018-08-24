@@ -76,7 +76,8 @@
 				<div class="item-allie"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/evolution.svg" alt="logo evolution"></div>
 				<div class="item-allie"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/three-balance.svg" alt="logo three balance"></div>
 				<div class="item-allie"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/gatorade-sports-cience-institute.svg" alt="logo gatorade sports cience institute"></div>
-				<div class="item-allie"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/redlac-logo.svg" alt="logo redlac logo"></div>
+				<div class="item-allie"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/redlac-logo.svg" alt="logo redlac"></div>
+				<div class="item-allie"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/iisb-logo.svg" alt="logo iisb"></div>
 			</div>
 		</div>
 
